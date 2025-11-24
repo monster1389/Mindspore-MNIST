@@ -16,8 +16,8 @@ This project implements a handwritten digit recognition system using Huawei's Mi
 
 ### Environment Setup
 - win11
-- Python 3.7+
-- MindSpore 2.0+
+- Python 3.9
+- MindSpore 2.7.1
 - NumPy
 - Matplotlib
 
@@ -26,16 +26,13 @@ This project implements a handwritten digit recognition system using Huawei's Mi
 ```bash
 # Install MindSpore (choose based on your device)
 # For CPU
-pip install mindspore
+pip install -r requirements.txt
 
 # For GPU
-pip install mindspore-gpu
+pip install mindspore-gpu numpy matplotlib
 
 # For Ascend (NPU)
-pip install mindspore-ascend
-
-# Install other dependencies
-pip install numpy matplotlib
+pip install mindspore-ascend numpy matplotlib
 ```
 
 ## 📁 Project Structure
@@ -50,7 +47,6 @@ pip install numpy matplotlib
 ## 🎯 Quick Start
 
 1. Data Preparation
-bash
 ```
 # Download MNIST dataset
 pip install download
@@ -63,7 +59,6 @@ url = "https://mindspore-website.obs.cn-north-4.myhuaweicloud.com/" \
 path = download(url, "./", kind="zip", replace=True)
 ```
 2. Training
-bash
 ```
 # Train the model
 python test.py
